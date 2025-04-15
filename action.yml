@@ -1,0 +1,14 @@
+name: build
+description: This is an action to automate Enonic XP app build
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: 11
+
+    - uses: gradle/actions/setup-gradle@v4
+
+    - run: ./gradlew build -Pcom.enonic.xp.app.production=true
+      shell: bash
