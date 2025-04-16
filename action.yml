@@ -1,5 +1,6 @@
-name: build
-description: This is an action to automate Enonic XP app build
+name: xp-app-build
+description: This is an action to automate Enonic XP applications build
+author: Enonic AS (https://enonic.com)
 runs:
   using: "composite"
   steps:
